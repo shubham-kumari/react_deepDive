@@ -1,4 +1,195 @@
-body{
-  background: #220046
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
 
+/* App Container */
+.div-app {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* Core Concepts Section */
+.core-concept {
+  margin-bottom: 40px;
+}
+
+.core-concept h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.core-cncept-element {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+.core-concept-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.core-concept-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Example Section */
+.examples {
+  margin-bottom: 40px;
+}
+
+.examples h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons Menu */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Tab Content */
+.tab-content {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 1rem;
+}
+
+.tab-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.tab-content pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+/* Core Concept Section */
+.main-core-concept {
+  list-style-type: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-core-concept img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
+
+.main-core-concept h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.main-core-concept p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.main-core-concept:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional Button Styling if used inside Core Concept */
+.main-core-concept button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.main-core-concept button:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* Header Section */
+.header {
+  background-color: #282c34;
+  padding: 40px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+  /* Optional: Adds a circular shape to the image */
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #61dafb; /* React's official color */
+}
+
+.header p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+  color: #ffffff;
 }

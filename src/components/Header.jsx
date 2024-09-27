@@ -7,7 +7,7 @@ export function Header() {
 
   const description = reactDescriptions[genRandomInt(2)];
   return (
-    <header className="text-white flex flex-col items-center justify-center">
+    <header className="header">
       <img
         src="https://scientyficworld.org/wp-content/uploads/2022/08/React-js.jpg"
         alt="Stylized atom"
