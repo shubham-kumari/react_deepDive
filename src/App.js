@@ -1,34 +1,21 @@
 import './App.css';
 import { CORE_CONCEPTS } from './data.js'
+import { Header } from './components/Header.jsx';
+import { CoreConcept } from './components/CoreConcept.jsx';
+import Button from './components/Button.jsx';
 
-const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
 
-function genRandomInt(max) {
-  return Math.floor(Math.random() * (max + 1));
-}
-
-function Header() {
-  const description = reactDescriptions[genRandomInt(2)]
-  return (
-    <header className="text-white flex flex-col items-center justify-center">
-      <img src="https://scientyficworld.org/wp-content/uploads/2022/08/React-js.jpg" alt="Stylized atom" />
-      <h1>React Essentials</h1>
-      <p>
-        {description} React concepts you will need for almost any app you are going to build!
-      </p>
-    </header>
-  );
-}
-
-function CoreConcept({image, title, description}) {
-  return <li className="flex flex-col justify-center items-center">
-    <img src={image} alt={title} />
-    <h3>{title}</h3>
-    <p>{description}</p>
-  </li>
-}
 
 function App() {
+
+  let tabContent = "Please click a button"
+
+  function handleSelect(selectedButton){
+    // selectedButton => 'components', 'JSX', 'Props', 'State'
+    // console.log(selectedButton);
+    tabContent = selectedButton;
+}
+
   return (
     <div className="text-white flex flex-col items-center justify-center">
       <Header />
@@ -36,12 +23,22 @@ function App() {
         <section className="p-1 rounded-md bg-indigo-950 shadow-sm">
           <h2>core Concepts</h2>
           <ul className="flex">
-            <CoreConcept {...CORE_CONCEPTS[0]}/>
-            <CoreConcept {...CORE_CONCEPTS[1]}/>
-            <CoreConcept {...CORE_CONCEPTS[2]}/>
-            <CoreConcept {...CORE_CONCEPTS[3]}/>
-            
+            <CoreConcept {...CORE_CONCEPTS[0]} />
+            <CoreConcept {...CORE_CONCEPTS[1]} />
+            <CoreConcept {...CORE_CONCEPTS[2]} />
+            <CoreConcept {...CORE_CONCEPTS[3]} />
+
           </ul>
+        </section>
+        <section>
+          <h2>Examples</h2>
+          <menu className='flex gap-8 '>
+            <Button onSelect={() => handleSelect('Components')}>Components</Button>
+            <Button onSelect={() => handleSelect('Props')}>Props</Button>
+            <Button onSelect={() => handleSelect('JSX')}>JSX</Button>
+            <Button onSelect={() => handleSelect('State')}>State</Button>
+          </menu>
+          {tabContent}
         </section>
       </main>
     </div>
