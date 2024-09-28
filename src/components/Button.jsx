@@ -1,8 +1,8 @@
-export default function Button({children, onSelect}){
+export default function Button({children, onSelect, isSelected}){
     
     return(
         <li>
-            <button onClick={onSelect} className="hover:bg-red-900">{children}</button>
+            <button  onClick={onSelect} className={isSelected ? "active" : ""}>{children}</button>
         </li>
     )
 }
