@@ -1,8 +1,8 @@
-export default function Button({children, onSelect, isSelected}){
+export default function Button({children, isSelected, /* onSelect */ ...props}){ // forworded prop or proxy
     
     return(
         <li>
-            <button  onClick={onSelect} className={isSelected ? "active" : ""}>{children}</button>
+            <button  /* onClick={onSelect} */ {...props} className={isSelected ? "active" : ""}>{children}</button>
         </li>
     )
 }
